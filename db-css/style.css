@@ -1,0 +1,693 @@
+:root {
+  --titulos: #3474b9;
+  --animacoes: #08f2e6;
+  --contraste: #e48400;
+  --fundo-escuro: #00153f;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../db-fonts/Montserrat-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  max-width: 100%;
+  font-family: Montserrat, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #202124;
+}
+
+.banner-total {
+  padding: 100px 0;
+  background: rgb(15, 52, 67);
+  background: linear-gradient(300deg, #08f2e6, #093637 100%);
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+/* Barra de Rolagem */
+
+body::-webkit-scrollbar {
+  width: 15px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #131313; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--animacoes); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 5px solid #202124; /* creates padding around scroll thumb */
+}
+
+/* Barra de Rolagem */
+
+header {
+  margin: 0 auto;
+  padding: 10px 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0 0 0 / 50%);
+  justify-content: center;
+  /* position: absolute; */
+  width: 100%;
+  box-shadow: rgb(0 0 0 / 41%) 0px 19px 38px, rgb(0 0 0 / 31%) 0px 15px 12px;
+}
+
+img.logo {
+  width: 50px;
+  height: 56px;
+}
+
+nav.menu {
+  width: 50%;
+}
+
+nav.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav.menu ul li {
+  width: 15%;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.5s;
+}
+
+nav.menu ul li:hover {
+  color: var(--animacoes);
+  text-shadow: 4px 4px 4px var(--animacoes);
+  transition: 0.5s;
+}
+
+.logos-banner {
+  width: 50%;
+}
+
+.logos-banner img {
+  width: 550px;
+  height: 94px;
+  display: block;
+  margin: 20px 0;
+}
+
+.texto-banner {
+  width: 60%;
+  margin-top: -100px;
+}
+
+.texto-banner p:first-child {
+  font-size: 35px;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.texto-banner p {
+  font-size: 22px;
+  color: white;
+}
+
+.servicos-iniciais {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: unset;
+  background-color: #131313;
+  padding: 0;
+}
+
+.servicos-iniciais h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #01b6e1;
+  width: 100%;
+  font-weight: bold;
+}
+
+.cards-total {
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo-cards {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.cards {
+  width: 30%;
+  padding: 20px;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.img-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 116px;
+}
+
+.cards h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #01b6e1;
+  margin: 18px 0;
+  text-transform: uppercase;
+  /* min-height: 100px; */
+}
+
+.cards p {
+  font-size: 15px;
+  padding: 5px 0;
+  text-align: justify;
+  color: white;
+}
+
+.cards a p {
+  width: fit-content;
+  text-transform: uppercase;
+  border: 1px solid var(--titulos);
+  color: var(--titulos);
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+filosofia-da-empresa {
+  padding: 0;
+  background-image: unset;
+  background-color: #202124;
+  padding: 20px 0;
+}
+
+filosofia-da-empresa .img-card img {
+  max-width: 24%;
+}
+
+filosofia-da-empresa .cards h3 {
+  color: white;
+}
+
+.formulario {
+  padding: 0;
+  justify-content: center;
+  background-image: unset;
+  background-color: #131313;
+  padding: 30px 0;
+}
+
+.formulario input {
+  width: 80%;
+  padding: 10px 0;
+  margin: 10px;
+  border: 0;
+  padding-left: 5px;
+  border-bottom: 2px solid rgb(8 242 230);
+  transition: 0.5s;
+  background-color: #131313;
+  color: white;
+}
+
+form {
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.formulario textarea {
+  width: 95%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: 0;
+  padding-left: 5px;
+  border-bottom: 2px solid rgb(8 242 230);
+  transition: 0.5s;
+  background-color: #131313;
+  color: white;
+}
+
+.formulario button {
+  width: 60%;
+  background-color: #131313;
+  color: var(--animacoes);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: 0;
+  padding-left: 5px;
+  border-radius: 10px;
+  box-shadow: rgb(10 243 255 / 10%) 4px 5px 5px, rgb(0 0 0 / 31%) 0px 11px 7px;
+  transition: 1s;
+}
+.formulario button:hover {
+  background-color: rgb(8 242 230 / 60%);
+  color: white;
+  transition: 1s;
+}
+
+.formulario input:focus {
+  outline: 0;
+  box-shadow: rgb(10 243 255 / 10%) 4px 5px 5px, rgb(0 0 0 / 31%) 0px 11px 7px;
+  transition: 1s;
+}
+
+.formulario textarea:focus {
+  outline: 0;
+  box-shadow: rgb(10 243 255 / 10%) 4px 5px 5px, rgb(0 0 0 / 31%) 0px 11px 7px;
+  transition: 0.5s;
+}
+
+.formulario h2 {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--animacoes);
+  font-weight: bold;
+}
+
+.formulario p {
+  font-size: 19px;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+.filosofia-da-empresa .cards {
+  padding-bottom: 0;
+  padding-top: 40px;
+}
+
+.cards:hover .descricao-card {
+  opacity: 1;
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.cards:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+  box-shadow: #08f2e6 0px -1px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+
+filosofia-da-empresa .img-card img {
+  height: unset;
+}
+
+filosofia-da-empresa .img-card {
+  min-height: 120px;
+}
+
+filosofia-da-empresa .cards:hover {
+  transform: unset;
+}
+
+filosofia-da-empresa .cards:hover .descricao-card {
+  opacity: 1;
+  transition: 1s;
+}
+
+.descricao-card {
+  opacity: 0;
+  transition: 0.5s;
+  min-height: 110px;
+  margin-top: -100px;
+}
+
+.descricao-card p {
+  text-align: center;
+}
+
+.form-esquerda {
+  width: 50%;
+}
+
+.form-direita {
+  width: 50%;
+}
+
+.form-btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.banner {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-banner {
+  width: 40%;
+}
+
+.botao-orcamento {
+  width: 100%;
+  text-align: center;
+}
+
+.botao-orcamento p {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: var(--animacoes);
+  color: #131313;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.botao-orcamento:hover p {
+  transform: scale(1.03);
+  transition: 0.5s;
+}
+
+.logo-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  transition: 0.5s;
+  right: 30px;
+}
+
+.logo-whatsapp:hover {
+  /* transform: scale(1.1); */
+  transform: rotate(360deg);
+  transition: 0.5ss;
+}
+
+.logos-banner-mobile {
+  display: none;
+  text-align: center;
+}
+
+.img-banner-mobile {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rodape {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logos-rodape {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.contato-rodape p {
+  color: white;
+}
+
+.portfolio {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.portfolio h2{
+  color: #FFF;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.projetos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projetos .projeto img{
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .logos-banner-mobile {
+    display: block;
+  }
+
+  .img-banner-mobile {
+    display: block;
+  }
+
+  nav.menu {
+    width: 100%;
+  }
+
+  nav.menu ul li {
+    width: 20%;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  nav.menu ul {
+    flex-wrap: wrap;
+  }
+
+  .logos-banner img {
+    width: 380px;
+    height: 65px;
+  }
+
+  .logos-banner {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .texto-banner {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+
+  .texto-banner p:first-child {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .texto-banner p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  servicos-iniciais h2 {
+    font-size: 25px;
+  }
+
+  .cards-total {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .formulario p {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .formulario input {
+    width: 90%;
+  }
+
+  .formulario textarea {
+    width: 90%;
+  }
+
+  .formulario button {
+    width: 80%;
+  }
+
+  nav.menu ul li {
+    font-size: 12px;
+  }
+
+  .cards:hover {
+    transform: unset;
+    transition: unset;
+    box-shadow: unset;
+  }
+
+  filosofia-da-empresa .cards:hover {
+    transform: unset;
+  }
+
+  filosofia-da-empresa .cards:hover .descricao-card {
+    opacity: unset;
+    transition: unset;
+  }
+  main {
+    background-image: unset;
+    background: rgb(2, 34, 93);
+    background: linear-gradient(
+      250deg,
+      rgba(2, 34, 93, 1) 0%,
+      rgba(0, 37, 99, 1) 35%,
+      rgba(1, 214, 244, 1) 100%
+    );
+  }
+
+  .banner {
+    padding: 50px 0;
+    justify-content: center;
+  }
+  .servicos-iniciais h2 {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+
+  .filosofia-da-empresa {
+    background-color: #1f2023;
+  }
+
+  .filosofia-da-empresa .cards-total {
+    margin: 0 auto;
+  }
+
+  .descricao-card {
+    opacity: 1;
+    padding-bottom: 20px;
+  }
+
+  .form-esquerda {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-direita {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .logos-banner {
+    display: none;
+  }
+
+  .img-banner {
+    display: none;
+  }
+
+  .texto-banner p:first-child {
+    font-size: 20px;
+  }
+
+  .texto-banner p {
+    font-size: 16px;
+  }
+
+  .cards h3 {
+    font-size: 18px;
+  }
+
+  .cards p {
+    font-size: 14px;
+  }
+
+  .botao-orcamento p {
+    width: 400px;
+    font-size: 14px;
+  }
+
+  .descricao-card {
+    margin-top: 0;
+  }
+
+  section.banner-total {
+    padding-bottom: 0;
+  }
+
+  .botao-orcamento{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .banner {
+    padding-bottom: 20px;
+  }
+
+  .logos-rodape {
+    width: 100%;
+  }
+
+  .rodape {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  .logos-rodape {
+    flex-wrap: wrap;
+    /* display: block; */
+  }
+
+  .logos-rodape img {
+    margin-bottom: 20px;
+  }
+
+  .contato-rodape {
+    width: 100%;
+    text-align: center;
+  }
+
+  section.portfolio {
+    padding-bottom: 30px;
+  }
+
+  .projetos {
+    flex-wrap: wrap;
+  }
+
+  .projetos .projeto {
+    margin-bottom: 30px;
+  }
+
+}
